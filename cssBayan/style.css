@@ -23,7 +23,29 @@ body {
       color: darkgoldenrod;
       transition: .3s;
     }
-   
+    
+    @media (max-width: 819px) and (min-width: 320px) {
+  
+      .line {
+        font-size:medium;
+      } 
+    }
+  
+    @media (max-width: 1919px) and (min-width: 820px) {
+  
+      .line {
+        font-size:large;
+      } 
+  
+    }
+  
+    @media  (max-width: 1920px) {
+  
+      .line {
+        font-size:xx-large;
+      } 
+  
+    }
   
     .row {
       margin: 0;
