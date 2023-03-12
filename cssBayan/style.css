@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    }
+  
+    h2 {
+      margin: 0.5em;
+      padding: 0.5em;
+      font-size: xx-large;
+    }
+  
+    input {
+      position:absolute;
+      z-index: -1;
+    }
+
+  
+    .wrapper:hover {
+      cursor: pointer;
+     
+      text-decoration: solid;
+      color: darkgoldenrod;
+      transition: .3s;
+    }
+    
+    @media (max-width: 819px) and (min-width: 320px) {
+  
+      .line {
+        font-size:medium;
+      } 
+    }
+  
+    @media (max-width: 1919px) and (min-width: 820px) {
+  
+      .line {
+        font-size:large;
+      } 
+  
+    }
+  
+    @media  (max-width: 1920px) {
+  
+      .line {
+        font-size:xx-large;
+      } 
+  
+    }
+  
+    .row {
+      margin: 0;
+      padding: 0;
+    }
+  
+    .line {
+      width: 100%;
+      color:#f9f991;
+      overflow: hidden;
+      font-size: xx-large;
+    }
+  
+    .line:hover { 
+       overflow: visible;
+  
+      }
+  
+    .line-label {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+      background: #275f33;
+      transition: .5s;
+      cursor: pointer;
+      margin: 0;
+    }
+    
+    .line-content {
+      display: flex;
+      justify-content: center;
+      max-height: 0;
+      background: rgb(233, 250, 183);
+      transition: 0.35s;
+    }
+  
+    .line-label::after {
+      content: "\276F";
+      width: 0.5em;
+      height: 0.5em;
+      transition:  0.35s;
+      padding: 0.5em;
+     }
+
+  
+    
+  
+    input:hover ~ .line-content{
+      max-height: 100vh;
+      animation:fadeIn ease-in 0.5s;
+   
+    }
+
+    
+    input:checked + .line-label::after {
+      transform: rotate(90deg);
+  
+    }
+  
+    input:hover + .line-label::after {
+      transform: rotate(90deg);
+     
+    }
+    input:checked ~ .line-content {
+      max-height: 100vh;
+    }
+  
