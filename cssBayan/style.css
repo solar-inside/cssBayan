@@ -15,6 +15,7 @@ body {
       position:absolute;
       z-index: -1;
     }
+
   
     .wrapper:hover {
       cursor: pointer;
@@ -88,13 +89,17 @@ body {
       height: 0.5em;
       transition:  0.35s;
       padding: 0.5em;
-    }
+     }
+
+  
+    
   
     input:hover ~ .line-content{
       max-height: 100vh;
       animation:fadeIn ease-in 0.5s;
    
     }
+
     
     input:checked + .line-label::after {
       transform: rotate(90deg);
